@@ -4,12 +4,28 @@
 		<meta charset="utf-8" />
 		<style type="text/css">
 			body {
-				font-size: 0,8em;
+				font-size: 0.8em;
 				font-family: dotum;
 				line-height: 1.6em;
 			}
+			body.black {
+				background-color: black;
+				color: white;
+			}
+			body.black a {
+				color: white;
+			}
+			body.black a:hover {
+				color: #f60;
+			}
+			body.black haeder {
+				border-bottom: 1px solid #333;
+			}
+			body.black nav {
+				border-right: 1px solid #333;
+			}
 			header {
-				border-bottom: 3px solid green;
+				border-bottom: 1px solid green;
 				padding: 20px 0;
 			}
 			#toolbar {
@@ -30,6 +46,9 @@
 			article {
 				float: left;
 			}
+			footer {
+				clear: both;
+			}
 			a {
 				text-decoration: none;
 			
@@ -41,7 +60,7 @@
 				color: #f60;
 			}
 			h1 {
-				font=size: 1.4em;
+				font-size: 1.4em;
 			}
 		</style>
 	</head>
@@ -52,20 +71,28 @@
 				<h1>희영아 사랑해</h1>
 			</header>
 			<div id="toolbar">
-				<input type="button" value="black" />
-				<input type="button" value="white" />
+				<input type="button" value="black" onclick="document.getElementById('body').className='black'" />
+				<input type="button" value="white" onclick="document.getElementById('body').className='white'" />
 			</div>
 			<nav>
 				<ul>
-					<li><a href="https://search.naver.com/search.naver?query=제주도+항공권&where=m&sm=mtp_hty">제주도 항공권</a></li>
-					<li><a href="https://www.hanatour.com">하나투어</a></li>
-					<li><a href="https://www.interpark.com">인터파크</a></li>
+					<li>
+						<a href="https://search.naver.com/search.naver?query=제주도+항공권&where=m&sm=mtp_hty">제주도 항공권</a>
+					</li>
+					<li>
+						<a href="https://www.hanatour.com">하나투어</a>
+					</li>
+					<li>
+						<a href="https://www.interpark.com">인터파크</a>
+					</li>
 				</ul>
 			</nav>
 			<article>
 				<h2>제주도 여행</h2>
 				<div>
-					<p>보고싶다</p>
+					<p>
+						보고싶다
+					</p>
 					<ul>
 						<li>
 							빨리
@@ -75,6 +102,17 @@
 						</li>
 					
 					</ul>
+					<p>
+						사랑스런
+					</p>
+						<ul>
+							<li>
+								희용이
+							</li>
+							<li>
+								뭐해요
+							</li>
+						</ul>
 				</div>
 			</article>
 		</div>
